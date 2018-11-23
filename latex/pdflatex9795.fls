@@ -1,0 +1,4 @@
+PWD /data/Lab/Tesi_Magistrale/Partial
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf

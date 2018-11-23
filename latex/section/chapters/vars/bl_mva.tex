@@ -1,0 +1,110 @@
+\subsection{Tag: isolation}
+
+\begin{frame}{Isolation fractions}
+	\begin{block}{Isolated muons}
+		We define isolated muons as the muons that have no other track in a $\Delta\eta\Delta\varphi$ cone of 0.4 width.
+	\end{block}
+	\inputtab{kindIsoFrac}
+\end{frame}
+
+\begin{frame}{Bl MVA}
+	\begin{block}{}
+			For the cases when the muon isn't fully isolated, we can use three variables to separate the categories
+			\begin{itemize}
+				\item $\Delta R = dR\left(p_\mu,\sum_{i\in dR<0.4,i\neq\mu}\vec{p_i}\right)$
+				\item $Q = \frac{\sum_{i\in dR<0.4} q_i\cdot p_{T,i}^{1.5}}{\sum_{i\in dR<0.4} p_{T,i}^{1.5}}$
+				\item $I = \frac{p_T}{\sum_{i\in dR<0.4,i\neq\mu} p_{T,i}}$
+			\end{itemize}
+	\end{block}
+	\begin{columns}
+		\column{0.33\textwidth}
+			\centering
+			$Q$\\
+			\rawinputgraph{coneCharge_barrelPt40signal}
+		\column{0.33\textwidth}
+			\centering
+			$\Delta R$\\
+			\rawinputgraph{coneDr_barrelPt40signal}
+		\column{0.33\textwidth}
+			\centering
+			$I$\\
+			\rawinputgraph{invIso_barrelPt40signal}
+	\end{columns}
+	\begin{block}{}
+		We merged this three variables in an MVA, that we use in an additional fit
+	\end{block}
+\end{frame}
+
+\begin{frame}{Fake MVA distributions}
+	\begin{columns}
+		\column{0.5\textwidth}
+			\centering
+			Barrel
+			\rawinputgraph{blMva_barrel_dist}
+		\column{0.5\textwidth}
+			\centering
+			Endcap
+			\rawinputgraph{blMva_endcap_dist}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Isolation based MVA: Barrel}
+	First row is Signal, second is Pileup
+	\vspace{1cm}
+	\begin{columns}[c]
+		\column{0.25\textwidth}
+			\centering
+			$4<p_T<5$
+			\rawinputgraph{blMva_barrelPt40Signal}
+			\rawinputgraph{blMva_barrelPt40Pileup}
+		\column{0.25\textwidth}
+			\centering
+			$5<p_T<7$
+			\rawinputgraph{blMva_barrelPt50Signal}
+			\rawinputgraph{blMva_barrelPt50Pileup}
+		\column{0.25\textwidth}
+			\centering
+			$7<p_T<10$
+			\rawinputgraph{blMva_barrelPt70Signal}
+			\rawinputgraph{blMva_barrelPt70Pileup}
+		\column{0.25\textwidth}
+			\centering
+			$10<p_T$
+			\rawinputgraph{blMva_barrelPt100Signal}
+			\rawinputgraph{blMva_barrelPt100Pileup}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Isolation based MVA: Endcap}
+	First row is Signal, second is Pileup
+	\vspace{1cm}
+	\begin{columns}[c]
+		\column{0.25\textwidth}
+			\centering
+			$4<p_T<5$
+			\rawinputgraph{blMva_endcapPt40Signal}
+			\rawinputgraph{blMva_endcapPt40Pileup}
+		\column{0.25\textwidth}
+			\centering
+			$5<p_T<7$
+			\rawinputgraph{blMva_endcapPt50Signal}
+			\rawinputgraph{blMva_endcapPt50Pileup}
+		\column{0.25\textwidth}
+			\centering
+			$7<p_T<10$
+			\rawinputgraph{blMva_endcapPt70Signal}
+			\rawinputgraph{blMva_endcapPt70Pileup}
+		\column{0.25\textwidth}
+			\centering
+			$10<p_T$
+			\rawinputgraph{blMva_endcapPt100Signal}
+			\rawinputgraph{blMva_endcapPt100Pileup}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	
+	\begin{block}{}
+		While all 4 categories are necessary for a proper fit, the high correlation between the weights of non-prompt bl, cl and fakes makes it unsuitable for extracting parameters different from the bl weight.
+	\end{block}
+\end{frame}

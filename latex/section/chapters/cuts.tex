@@ -1,0 +1,90 @@
+\section{Datasets}
+
+\subsection{Used datasets}
+\begin{frame}{Datasets}
+	\begin{block}{Used datasets}
+		\begin{itemize}
+			\item MC2016:
+				\begin{itemize}
+					\item BsToJpsiPhi BMuonFilter, \num{\sim 100e6} events, \num{2.825e7} after secondary vertex reconstruction
+					\item BuToJpsiK BMuonFilter, \num{\sim 20e6} events, \num{7.986e6} after SV reconstruction
+					\item BdToJpsiKstar BMuonFilter, \num{\sim 73e6} events, \num{1.9734e7} after SV reconstruction and requiring the HLT DoubleMu4\_JpsiTrk\_Displaced
+				\end{itemize}
+			\item Data2016:
+				\begin{itemize}
+					\item CharmoniumRun2016
+					\item only events flagged as $\PBp\to\PJgy\PKp\to\Pgmp\Pgmm\PKp$ totaling in \num{7.151e7}
+%						\begin{itemize}
+%							\item $\PBp\to\PJgy\PKp\to\Pgmp\Pgmm\PKp$
+%							\item $\PBz\to\PJgy\PKst\to\Pgmp\Pgmm\PKp\Pgpm$
+%							\item $\PBs\to\PJgy\Pgf\to\Pgmp\Pgmm\PKp\PKm$
+%						\end{itemize}
+				\end{itemize}
+		\end{itemize}
+		2017 hasn't been used yet as the MVAs haven't technically been trained for it
+	\end{block}
+\end{frame}
+
+\begin{frame}{Secondary vertexes}
+	\begin{block}{Secondary vertexes}
+		We only reconstruct vertex matching the processes
+		\begin{itemize}
+			\item $\PBp\to\PJgy\PKp\to\Pgmp\Pgmm\PKp$
+			\item $\PBz\to\PJgy\PKst\to\Pgmp\Pgmm\PKp\Pgpm$
+			\item $\PBs\to\PJgy\Pgf\to\Pgmp\Pgmm\PKp\PKm$
+		\end{itemize}
+	\end{block}
+	\begin{block}{}
+		On MC samples we use the SV declared in the generation, while in data we choose to reconstruct the $\PBp\to\PJgy\PKp\to\Pgmp\Pgmm\PKp$ decay
+	\end{block}
+\end{frame}
+
+
+\subsection{Selections}
+
+\begin{frame}{Event selections}
+	\centering
+	\begin{tabular}{ccc}
+		Cut &	Events &\\	\midrule
+		total &	\num{6.2323+-0.0007e7} &\\
+		HLT DoubleMu4\_JpsiTrk\_Displaced &	\num{1.4290+-0.004e7} &	Fig. left \\
+		secondary vertex quality &	\num{5.346+-0.002e6} &	Fig. right
+	\end{tabular}
+	\vspace{0.1cm}
+	\begin{columns}[c]
+		\column{0.5\textwidth}
+			\centering
+			before SV quality cuts
+			
+			\rawinputgraph{massHistUncut}
+			
+			Signal: \num{2.06 +- 0.01 e+06}
+		\column{0.5\textwidth}
+			\centering
+			after SV quality cuts
+			
+			\rawinputgraph{massHist}
+			
+			Signal: \num{1.612 +- 0.006 e+06}
+	\end{columns}
+\end{frame}
+	
+\begin{frame}{Muon selections}
+	\begin{block}{}
+		We select additional global muons that are separate from the reconstructed secondary vertex
+	\end{block}
+	\resizebox{.9\textwidth}{!}{
+		\begin{tabular}{ccc}
+			Cut &	\Pgm Signal &	\Pgm Pileup \\	\midrule
+			$p_T$ > 4 &	\num{1.871+-0.004e5} &	\num{4.62+-0.02e4}\\
+			$E_{xy} < \SI{0.005}{\cm}$ &	\num{1.723+-0.004e5} &	\num{3.82+-0.02e4} \\
+			After all previous cuts: &	 &	 \\
+			barrel &	\num{1.101+-0.003e5} &	\num{2.19+-0.01e4} \\
+			endcap &	\num{6.21+-0.02e4} &	\num{1.64+-0.01e4} \\
+			$\SI{4}{\GeV}<p_T<\SI{5}{\GeV}$ &	\num{4.25+-0.02e4} &	\num{1.65+-0.01e4} \\
+			$\SI{5}{\GeV}<p_T<\SI{7}{\GeV}$ &	\num{5.54+-0.02e4} &	\num{1.35+-0.01e4} \\
+			$\SI{7}{\GeV}<p_T<\SI{10}{\GeV}$ &	\num{3.84+-0.02e4} &	\num{5.25+-0.07e3} \\
+			$\SI{10}{\GeV}<p_T$ &	\num{3.60+-0.02e4} &	\num{2.97+-0.05e3}
+		\end{tabular}
+	}
+\end{frame}

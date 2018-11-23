@@ -1,0 +1,96 @@
+\subsection{Tag: MVA for fake rejection}
+
+\begin{frame}{MVA for fake rejection}
+	\begin{block}{}
+		\begin{itemize}
+			\item Alberto's MVA, for the selection of real muons from fakes
+			\item Mostly used as an additional fit, thanks to its greatly different distribution in the two cases.
+			\item Separate fit for barrel/endcap, because of the difference in the detectors in the regions
+			\item Fit in $p_T$ windows, since the MVA distribution varies with it
+		\end{itemize}
+	\end{block}
+	\begin{block}{Variables}
+		This MVA uses several input variables:
+			\begin{itemize}
+				\item Quality of track fit
+					\begin{itemize}
+						\item in the muon chambers
+						\item in the tracker
+						\item matching of the two
+					\end{itemize}
+				\item Muon $p_T$
+				\item Muon $\eta$
+			\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Fake selection MVA: input distributions example}
+	\rawinputgraph{fakeMVAVars1}
+\end{frame}
+
+\begin{frame}{Fake selection MVA: distributions}
+	\begin{columns}
+		\column{0.5\textwidth}
+			\centering
+			Barrel
+			\rawinputgraph{fakeMva_barrel_dist}
+		\column{0.5\textwidth}
+			\centering
+			Endcap
+			\rawinputgraph{fakeMva_endcap_dist}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Fake selection MVA: Barrel}
+	First row is Signal, second is Pileup
+	\vspace{1cm}
+	\begin{columns}[c]
+		\column{0.25\textwidth}
+			\centering
+			$4<p_T<5$
+			\rawinputgraph{fakeMva_barrelPt40Signal}
+			\rawinputgraph{fakeMva_barrelPt40Pileup}
+		\column{0.25\textwidth}
+			\centering
+			$5<p_T<7$
+			\rawinputgraph{fakeMva_barrelPt50Signal}
+			\rawinputgraph{fakeMva_barrelPt50Pileup}
+		\column{0.25\textwidth}
+			\centering
+			$7<p_T<10$
+			\rawinputgraph{fakeMva_barrelPt70Signal}
+			\rawinputgraph{fakeMva_barrelPt70Pileup}
+		\column{0.25\textwidth}
+			\centering
+			$10<p_T$
+			\rawinputgraph{fakeMva_barrelPt100Signal}
+			\rawinputgraph{fakeMva_barrelPt100Pileup}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Fake selection MVA: Endcap}
+	First row is Signal, second is Pileup
+	\vspace{1cm}
+	\begin{columns}[c]
+		\column{0.25\textwidth}
+			\centering
+			$4<p_T<5$
+			\rawinputgraph{fakeMva_endcapPt40Signal}
+			\rawinputgraph{fakeMva_endcapPt40Pileup}
+		\column{0.25\textwidth}
+			\centering
+			$5<p_T<7$
+			\rawinputgraph{fakeMva_endcapPt50Signal}
+			\rawinputgraph{fakeMva_endcapPt50Pileup}
+		\column{0.25\textwidth}
+			\centering
+			$7<p_T<10$
+			\rawinputgraph{fakeMva_endcapPt70Signal}
+			\rawinputgraph{fakeMva_endcapPt70Pileup}
+		\column{0.25\textwidth}
+			\centering
+			$10<p_T$
+			\rawinputgraph{fakeMva_endcapPt100Signal}
+			\rawinputgraph{fakeMva_endcapPt100Pileup}
+	\end{columns}
+\end{frame}

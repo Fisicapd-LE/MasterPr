@@ -1,0 +1,32 @@
+\documentclass[10pt]{beamer}
+
+\input{latex/preamble/info.tex}
+
+\input{latex/preamble/packages.tex}
+
+\DeclareGraphicsExtensions{.pdf, .png, .jpg} % Se due immagini hanno lo stesso nome sceglile secondo l'ordine di filetype qui
+
+\input{latex/preamble/macros.tex}
+
+\usetheme{Frankfurt}
+%[compress][width=1.6cm]
+\setbeamertemplate{footline}[frame number]
+
+
+\title[Measurement of \xsec{$\Pqb\overline{\Pqb}}$] % (optional, only for long titles)
+{Measurement of the $\Pqb\overline{\Pqb}$ cross section using semileptonic decays}
+\author[Enrico Lusiani]%
+{
+	Enrico Lusiani\\[1ex]
+}
+
+%////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+%////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+% Fine dei dati iniziali per il latex: il documento finale inizierà da qui
+\begin{document}
+
+\frame{\titlepage}
+
+\subimport{latex/section/}{chapters}
+
+\end{document}

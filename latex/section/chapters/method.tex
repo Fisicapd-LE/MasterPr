@@ -1,0 +1,47 @@
+\section{Introduction}
+\subsection{}
+
+\begin{frame}
+	\begin{block}{Objective}
+		The objective of the thesis is the measure of $R_{\Pqb}$, defined as 
+		\[R_{\Pqb}=\frac{\xsec(\Pp\Pp\to\Pqb\Paqb X)}{\xsec(\Pp\Pp\to X)}\]
+	\end{block}
+	(Ignoring background)
+	\[N_{\Pgm|pileup}=N_0\cdot N_{PV,pileup}\cdot R_{\Pqb}\cdot 2 B_{\Pgm}\varepsilon_{detection}\]
+	\[N_{\Pgm|\text{os\Pqb}}=N_0\cdot B_{\Pgm}\varepsilon_{detection}\]
+	with
+	\[B_{\Pgm}=\text{average number of muons from a single \Pqb}\]
+	\[N_0=\text{number of reconstructed B}\]
+	From the above formulas we have
+	\[R_{\Pqb}=\frac{\sum_{events}\frac{N_{\Pgm|pileup}}{2N_{PV,pileup}}}{\sum_{events}N_{\Pgm|\text{os\Pqb}}}\]
+\end{frame}
+
+\begin{frame}
+	\begin{block}{General method}
+		\begin{itemize}
+			\item Ratio of frequency of $\Pqb \to X\to\Pgm$ in the same PV of a reconstruted B-meson or in a pileup vertex.
+				\begin{itemize}
+					\item This way we can avoid normalization problems, such as luminosity, decay width and reconstruction efficiency.
+				\end{itemize}
+			\item Counting of signal events by studying the muon impact parameter.
+			\item Additional fits to MVA variables to help the fit to converge
+		\end{itemize}
+	\end{block}
+	%TODO better explaination
+\end{frame}
+
+\begin{frame}{Discriminating variables}
+	\begin{block}{Impact parameter}
+		\begin{itemize}
+			\item Distance of closest approach between the muon track projection on the xy plane and the primary vertex it originated from
+			\item Unsigned, as signing was found to fail \SI{\sim 30/40}{\percent} of the times due to absence of jets around the muon track
+		\end{itemize}
+	\end{block}
+	
+	\begin{block}{Additional fits}
+		\begin{itemize}
+			\item Alberto's MVA, for fake muon selection
+			\item Isolation based MVA, for identification of $\Pqb\to\Pgm$ from  $\Pqb\to X\to\Pgm$, $\Pqc\to\Pgm$ and fake muons
+		\end{itemize}
+	\end{block}
+\end{frame}

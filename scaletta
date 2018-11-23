@@ -1,0 +1,19 @@
+x	misura sezione bb
+x	metodo?
+x	parametro impatto -> dXY codice Paolo, no segno
+x	muotagli
+x		tagli qualita' vertice principale
+x		tagli muoPt
+x		tagli muoCode 0
+x		"tagli" dxy
+x		"tagli" exy
+x		separazione eta
+x		separazione pt
+x	fit massa
+x	fakeMva
+x	blMva
+x		singole variabili
+x	split exy
+x	fit finali
+x		vengono abbastanza 
+x		v2?

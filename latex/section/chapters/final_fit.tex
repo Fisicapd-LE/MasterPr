@@ -1,0 +1,71 @@
+\section{Final fit}
+
+\subsection{}
+
+\begin{frame}{Final fit}
+	\begin{block}{}
+		The final fit integrates the informations from the previous MVA fits inside the impact parameter fit, as gaussian constraints.
+		To avoid sistematic errors, we also allow the model parameters to float, adding other gaussian constraints around the results from the MC fit.
+		
+		The models are different for each window in $\eta$ and $p_T$, but in those regions we use the same models for the signal and pileup fit. 
+		This is enforced by fitting the two regions simulataneously with common parameters.
+	\end{block}
+	\begin{block}{Weights}
+		Pileup events need to be normalized using the number of primary vertexes in the event.
+		This is accomplished by adding a weight to each muon in the dataset, equal to $1/(N_{PV}-1)$, which we verified does not introduce biases in the distributions.
+	\end{block}
+\end{frame}
+
+\begin{frame}{Impact parameter fit: barrel}
+	First row is Signal, second is Pileup
+	\vspace{1cm}
+	\begin{columns}[c]
+		\column{0.25\textwidth}
+			\centering
+			$4<p_T<5$
+			\rawinputgraph{dxyfinal_barrelPt40Signal}
+			\rawinputgraph{dxyfinal_barrelPt40Pileup}
+		\column{0.25\textwidth}
+			\centering
+			$5<p_T<7$
+			\rawinputgraph{dxyfinal_barrelPt50Signal}
+			\rawinputgraph{dxyfinal_barrelPt50Pileup}
+		\column{0.25\textwidth}
+			\centering
+			$7<p_T<10$
+			\rawinputgraph{dxyfinal_barrelPt70Signal}
+			\rawinputgraph{dxyfinal_barrelPt70Pileup}
+		\column{0.25\textwidth}
+			\centering
+			$10<p_T$
+			\rawinputgraph{dxyfinal_barrelPt100Signal}
+			\rawinputgraph{dxyfinal_barrelPt100Pileup}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Impact parameter fit: endcap}
+	First row is Signal, second is Pileup
+	\vspace{1cm}
+	\begin{columns}[c]
+		\column{0.25\textwidth}
+			\centering
+			$4<p_T<5$
+			\rawinputgraph{dxyfinal_endcapPt40Signal}
+			\rawinputgraph{dxyfinal_endcapPt40Pileup}
+		\column{0.25\textwidth}
+			\centering
+			$5<p_T<7$
+			\rawinputgraph{dxyfinal_endcapPt50Signal}
+			\rawinputgraph{dxyfinal_endcapPt50Pileup}
+		\column{0.25\textwidth}
+			\centering
+			$7<p_T<10$
+			\rawinputgraph{dxyfinal_endcapPt70Signal}
+			\rawinputgraph{dxyfinal_endcapPt70Pileup}
+		\column{0.25\textwidth}
+			\centering
+			$10<p_T$
+			\rawinputgraph{dxyfinal_endcapPt100Signal}
+			\rawinputgraph{dxyfinal_endcapPt100Pileup}
+	\end{columns}
+\end{frame}

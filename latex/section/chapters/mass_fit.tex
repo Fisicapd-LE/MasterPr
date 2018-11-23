@@ -1,0 +1,32 @@
+\section{}
+
+\begin{frame}{Mass fit}
+	\begin{block}{}
+		\begin{itemize}
+			\item Signal: 3 gaussians with a common mean
+			\item Background: 2 exponentials, an error function for the lower mass region and a large sigma gaussian (with different mean from the signal)
+		\end{itemize}
+	\end{block}
+	\vspace{0.3cm}
+	
+	\begin{columns}[c]
+		\column{0.5\textwidth}
+			\centering
+			before SV quality cuts
+			
+			\rawinputgraph{massHistUncut}
+			
+			Signal: \num{2.06 +- 0.01 e+06}
+			
+			Total: \num{1.429e+07}
+		\column{0.5\textwidth}
+			\centering
+			after SV quality cuts
+			
+			\rawinputgraph{massHist}
+			
+			Signal: \num{1.612 +- 0.006 e+06}
+			
+			Total: \num{5.346e+06}
+	\end{columns}
+\end{frame}
